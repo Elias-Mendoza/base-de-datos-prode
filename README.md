@@ -11,8 +11,8 @@ El sistema modela una plataforma de torneos deportivos donde los usuarios regist
 * `tablas.sql`: Definición del esquema DDL (Data Definition Language) con creación de tablas, claves primarias, claves foráneas, restricciones de integridad (`CHECK`, `UNIQUE`) e índices de optimización.
 * `datos.sql`: Script DML con la carga de datos de prueba para validar restricciones y consultas analíticas.
 * `roles.sql`: Configuración de seguridad, creación de roles (`administrador`, `usuario`) y asignación granular de privilegios (`GRANT`).
-* `consultas.sql`: Consultas DML avanzadas que resuelven los requerimientos del sistema (cálculo de aciertos, popularidad de torneos y auditoría de accesos).
-* `documentacion/`: Documento explicativo con el Diagrama Entidad-Relación (DER) y la justificación formal del pasaje al Modelo Relacional.
+* `Consultas.sql`: Consultas DML avanzadas que resuelven los requerimientos del sistema (cálculo de aciertos, popularidad de torneos y auditoría de accesos).
+* `docs/`: Documento explicativo con el Diagrama Entidad-Relación (DER) y la justificación formal del pasaje al Modelo Relacional.
 
 ---
 
@@ -72,13 +72,13 @@ Orden de ejecución de scripts:
    psql -U postgres -d prode_db -f roles.sql
 
 4. Ejecución de Consultas y Reportes:
-   psql -U postgres -d prode_db -f consultas.sql
+   psql -U postgres -d prode_db -f Consultas.sql
 
 ---
 
 ## 🔍 Consultas Analíticas Destacadas
 
-Entre los requerimientos implementados en `consultas.sql` se destacan:
+Entre los requerimientos implementados en `Consultas.sql` se destacan:
 
 * **Ranking de Aciertos:** Cuantificación exacta de predicciones donde coinciden ambos marcadores entre el pronóstico del usuario y el resultado final del partido:
 
@@ -125,5 +125,3 @@ Se estructuró la seguridad mediante dos perfiles definidos en `roles.sql`:
 * Martin Facundo Limardo
 * Christian Tomás Porco
 * Juan Ruben Claros
-
-*Facultad de Ingeniería, Universidad de Buenos Aires (FIUBA)*
